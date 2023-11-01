@@ -1,9 +1,10 @@
 import React from 'react'
-import style from './Header.module.css'
+import stl from './Header.module.css'
 import itIcon from '../../Assets/CatalogIcons/it_icon.png'
 import gameIcon from '../../Assets/CatalogIcons/game_icon.png'
 import sportIcon from '../../Assets/CatalogIcons/Sport_icon.png'
 import musicItem from '../../Assets/CatalogIcons/Music_icon.png'
+import profile from '../../Assets/Profile/Q34F.png'
 
 const icons = [
     itIcon,
@@ -16,24 +17,32 @@ type Props = {}
 
 export default function Header({}: Props) {
   return (
-    <div className={style.header}>
-        <div className={style.navPanel}>
+    <div className={stl.header}>
 
-            <div className={style.navigation}>
+        <div className={stl.navPanel}>
+
+            <div className={stl.navigation}>
                 {icons.map((i) => {
-                    console.log(i)
                     return (
-                        <div key={i} style={{height: '48px', width : '96px', marginRight: '40px'}}>
-                            <img style={{height: '100%', width: '100%'}} src={i}></img>
+                        <div key={i} className={stl.navItem}>
+                            
+                            <div style={{height: '32px', width : '64px'}}>
+                                <img style={{height: '100%', width: '100%'}} src={i}></img>
+                            </div>
+                            <hr style={{border: 'solid 3px black', marginTop: '5px', borderRadius : '4px'}}></hr>
+
                         </div>
                     )})
                 }      
             </div>
         </div>
+
+       
         
-        <div className={style.profilePanel}>
-            <div className={style.ikon}>                   
-            </div>
+        <div className={stl.profilePanel}>
+     
+            <img className={stl.ikon} src={profile}/>        
+           
         </div>
     </div>
   )

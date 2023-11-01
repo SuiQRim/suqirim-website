@@ -1,34 +1,62 @@
 .header {
-    background-color: #f29e50;
-    padding: 20px 0px;
+    background-color: #FF9B50;
+    padding: 40px 10% 40px 10%;
     width: 100%;
     display: grid;   
-    grid-template-columns: 1fr 1fr;
-    height: 400px;
+    gap: 40px;
+    grid-template-columns: 2fr 1fr;
+}
+
+.activities {
+    display: grid;
+}
+.activitiesTitle {
+    text-align: center;
 }
 
 .navPanel {
-    margin-bottom: 40px;
-    margin: 40px 10%;
-    display: grid;
-    align-items:center;
-    justify-content: center;
+    display: flex;
+    flex-direction:column;
+    justify-content: start;
+    align-items: start;
 }
 
 .navigation {
+    margin-top: 16px;
     display: flex;
+    justify-content: space-around;
+    padding: 24px 64px;
+    background-color: #E25E3E;
+    border-radius: 16px;
+}
+
+.navItem{
+    margin: 0px 20px;
+    transition: 0.25s;
+    cursor : pointer;
+
+}
+
+.navItem:hover {
+    transform: scale(1.2);
+    -webkit-filter: invert(100%); /* Safari/Chrome */
+    filter: invert(100%);
+}
+.navItem:active {
+    transform: scale(1.1);
+    -webkit-filter: invert(85%); /* Safari/Chrome */
+    filter: invert(85%);
 }
 
 .profilePanel{
     display: flex;
     justify-content: center;
-    align-items: center;
-    border: black solid 2px;
-    margin-right: 20%;
+    align-items: end;
 }
 
 .ikon {
-    position: relative;
-    width: 50%;
-    background: white;
+    height: 300px;
+    width : 300px;
+    border-radius : 64px;
+    border: solid 16px #E25E3E;
 }

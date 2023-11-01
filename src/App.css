@@ -5,6 +5,10 @@
 
 }
 
+body, p {
+    margin: auto;
+}
+
 .App {
     overflow: hidden;
     display: flex;
