@@ -1,0 +1,34 @@
+.header {
+    background-color: #f29e50;
+    padding: 20px 0px;
+    width: 100%;
+    display: grid;   
+    grid-template-columns: 1fr 1fr;
+    height: 400px;
+}
+
+.navPanel {
+    margin-bottom: 40px;
+    margin: 40px 10%;
+    display: grid;
+    align-items:center;
+    justify-content: center;
+}
+
+.navigation {
+    display: flex;
+}
+
+.profilePanel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: black solid 2px;
+    margin-right: 20%;
+}
+
+.ikon {
+    position: relative;
+    width: 50%;
+    background: white;
+}
