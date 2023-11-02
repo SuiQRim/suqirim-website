@@ -1,18 +1,19 @@
 import React, { FC } from 'react'
 import style from './Navigation.module.css'
 import NavItem from './Item/NavItem'
+import { Tab } from '../../Models/Tab'
 
 
 interface Props {
-    icons : string []
+    icons : Tab []
 }
 
 const Navigation:FC<Props> = (props) => {
   return (
     <div className={style.navigation}>
-        {props.icons.map((i, index) => {
+        {props.icons.map((t, index) => {
             return (
-                <NavItem key={index} image={i}/>
+                <NavItem key={index} path={t.path} image={t.icon}/>
             )})
         }      
     </div>
