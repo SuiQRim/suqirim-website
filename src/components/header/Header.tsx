@@ -1,49 +1,34 @@
-import React from 'react'
-import stl from './Header.module.css'
+import React, { FC } from 'react'
+import style from './Header.module.css'
 import itIcon from '../../Assets/CatalogIcons/it_icon.png'
 import gameIcon from '../../Assets/CatalogIcons/game_icon.png'
 import sportIcon from '../../Assets/CatalogIcons/Sport_icon.png'
 import musicItem from '../../Assets/CatalogIcons/Music_icon.png'
 import profile from '../../Assets/Profile/Q34F.png'
+import Navigation from './navigation/Navigation'
 
-const icons = [
+const icons : string [] = [
     itIcon,
     gameIcon,
     sportIcon,
     musicItem
 ]
 
-type Props = {}
+type Props = {
+    mini? : boolean
+}
 
-export default function Header({}: Props) {
+const Header : FC<Props> = (props) => {
   return (
-    <div className={stl.header}>
-
-        <div className={stl.navPanel}>
-
-            <div className={stl.navigation}>
-                {icons.map((i) => {
-                    return (
-                        <div key={i} className={stl.navItem}>
-                            
-                            <div style={{height: '32px', width : '64px'}}>
-                                <img style={{height: '100%', width: '100%'}} src={i}></img>
-                            </div>
-                            <hr style={{border: 'solid 3px black', marginTop: '5px', borderRadius : '4px'}}></hr>
-
-                        </div>
-                    )})
-                }      
-            </div>
+    <div className={style.header}>
+        <div className={style.navPanel}>
+            <Navigation icons={icons} />
         </div>
-
-       
-        
-        <div className={stl.profilePanel}>
-     
-            <img className={stl.ikon} src={profile}/>        
-           
+        <div className={style.profilePanel}>
+            <img alt='icon' className={props.mini ? style.iconMini : style.icon} src={profile}/>
         </div>
     </div>
   )
 }
+
+export default Header;
