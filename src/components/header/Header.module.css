@@ -21,6 +21,7 @@
 }
 
 .iconMini {
+    cursor: pointer;
     transition: 0.2s;
     height: 91px;
     width: 91px;
@@ -30,11 +31,11 @@
 
 
 .icon {
+    cursor: default;
     transition: 0.2s;
     height: 280px;
     width: 280px;
     border-radius : 32px;
-    border: solid 16px #E25E3E;
 }
 .icon:hover,
 .iconMini:hover {

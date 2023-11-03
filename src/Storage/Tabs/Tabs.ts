@@ -1,8 +1,8 @@
-import { Tab } from "../../Models/Tab";
-import it from './CatalogIcons/it_icon.png'
-import game from './CatalogIcons/game_icon.png'
-import sport from './CatalogIcons/sport_icon.png'
-import music from './CatalogIcons/music_icon.png'
+import { Tab } from "../../models/Tab";
+import it from './catalogIcons/it_icon.png'
+import game from './catalogIcons/game_icon.png'
+import sport from './catalogIcons/sport_icon.png'
+import music from './catalogIcons/music_icon.png'
 
 
 export const Tabs: Tab[] = [

@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import style from './Navigation.module.css'
 import NavItem from './Item/NavItem'
-import { Tab } from '../../Models/Tab'
+import { Tab } from '../../models/Tab'
 
 
 interface Props {

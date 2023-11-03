@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
-import { BrowserRouter, Routes, Route,useLocation} from 'react-router-dom';
+import {Routes, Route,useLocation} from 'react-router-dom';
 import It from './pages/it/It';
 import Game from './pages/game/Game';
 import Content from './components/content/Content';
@@ -13,11 +13,10 @@ function App() {
     console.log(location)
     return (
         <div className='App'>
-            <Header mini={!(location.pathname == '/' || location.pathname == '/home')}/>
+            <Header mini={!(location.pathname === '/' || location.pathname === '/home')}/>
             <Content>
                 <Routes>
                     <Route path='*' element={<Home/>}/>
-                    <Route path='/home' element={<Home/>}/>
                     <Route path='/it' element={<It/>}/>
                     <Route path='/game' element={<Game/>}/>
                     <Route path='/sport'/>

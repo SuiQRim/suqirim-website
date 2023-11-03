@@ -2,7 +2,8 @@ import React, { FC } from 'react'
 import style from './Header.module.css'
 import profile from '../../Assets/Profile/Q34F.png'
 import Navigation from '../navigation/Navigation'
-import { Tabs } from '../../Storage/Tabs/Tabs'
+import { Tabs } from '../../storage/tabs/Tabs'
+import { Link } from 'react-router-dom'
 
 const tabs = Tabs;
 
@@ -16,9 +17,13 @@ const Header : FC<Props> = (props) => {
         <div className={style.navPanel}>
             <Navigation icons={tabs} />
         </div>
+    
         <div className={style.profilePanel}>
-            <img alt='icon' className={props.mini ? style.iconMini : style.icon} src={profile}/>
+            <Link to='/'>
+                <img alt='icon' className={props.mini ? style.iconMini : style.icon} src={profile}/>
+            </Link>
         </div>
+    
     </div>
   )
 }
