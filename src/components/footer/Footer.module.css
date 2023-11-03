@@ -1,5 +1,39 @@
 .footer {
     margin-top: auto;
     background: #FF9B50;
-    height: 86px;
+    min-height: 86px;
+    padding: 20px 13%;
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    justify-content:space-between
+}
+
+.socialNetworks {
+    display: flex;
+    gap: 10px;
+}
+
+.socNet {
+    transition: 0.25s;
+    cursor: pointer;
+    height: 48px;
+    width: 48px;
+    border: 4px #E25E3E solid;
+    border-radius: 8px;
+}
+
+.socNet:hover {
+    border-width: 0px;
+}
+
+.socNet img {
+    transition: 0.25s;
+    border-radius: 4px;
+    width: 100%;
+    height: 100%;
+}
+
+.socNet:hover img {
+    border-radius: 8px;
 }
