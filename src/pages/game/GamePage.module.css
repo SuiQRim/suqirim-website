@@ -1,0 +1,16 @@
+.game {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr fit-content(25%)
+}
+
+.bounty {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.profile {
+    padding: 40px;
+}

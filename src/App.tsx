@@ -4,7 +4,7 @@ import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import {Routes, Route,useLocation} from 'react-router-dom';
 import It from './pages/it/It';
-import Game from './pages/game/Game';
+import GamePage from './pages/game/GamePage';
 import Content from './components/content/Content';
 import Home from './pages/home/Home';
 
@@ -18,7 +18,7 @@ function App() {
                 <Routes>
                     <Route path='*' element={<Home/>}/>
                     <Route path='/it' element={<It/>}/>
-                    <Route path='/game' element={<Game/>}/>
+                    <Route path='/game' element={<GamePage/>}/>
                     <Route path='/sport'/>
                     <Route path='/music'/>
                 </Routes>     

@@ -1,11 +1,11 @@
 import React, { FC } from 'react'
 import style from './Navigation.module.css'
 import NavItem from './Item/NavItem'
-import { Tab } from '../../models/Tab'
+import { ITab } from '../../models/ITab'
 
 
 interface Props {
-    icons : Tab []
+    icons : ITab []
 }
 
 const Navigation:FC<Props> = (props) => {

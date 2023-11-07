@@ -1,0 +1,48 @@
+.container {
+    display: flex;
+    gap: 16px;
+    border: #E25E3E solid;
+    padding: 4px 0px;
+    border-width: 0px 0px 16px 0px;
+}
+
+.content {
+    width: 100%;
+    display: grid;
+    justify-self: flex-end;
+    grid-template-rows: 1fr auto;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+
+}
+
+.icon img {
+    border-radius: 4px;
+    height: 84px;
+}
+
+.name {
+    display: grid;
+    align-items:center;
+    justify-content: center;
+    
+}
+.tier {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px
+}
+
+.like {
+    height: 32px;
+    width: 32px;
+
+}
+
+.like img {
+    height: 100%;
+    width: 100%;
+}
