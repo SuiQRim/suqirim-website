@@ -1,6 +1,6 @@
 .header {
     background-color: #FF9B50;
-    padding: 40px 13% 40px 13%;
+    padding: 24px 13% 24px 13%;
     width: 100%;
     display: grid;   
     gap: 40px;
@@ -17,16 +17,15 @@
 .profilePanel{
     display: flex;
     justify-content: flex-end;
-    align-items: flex-end;
 }
 
 .iconMini {
     cursor: pointer;
     transition: 0.2s;
-    height: 91px;
-    width: 91px;
-    border-radius : 16px;
-    border: solid 8px #E25E3E;
+    height: 70.71px;
+    width: 70.71px;
+    border-radius : 12px;
+    border: solid 6px #E25E3E;
 }
 
 

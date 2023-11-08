@@ -9,11 +9,19 @@ body, p {
 }
 
 .App {
-    overflow-x: hidden;
-    display: grid;
+    overflow: hidden;
+    display:  grid;
     grid-template-rows: auto 1fr auto;
     width: 100%;
+    min-height: 100vh;
     height: 100vh;
+    max-height: 100vh;
+}
+
+@media (max-width: 980px) {
+    .App {
+        overflow: auto;
+    }
 }
 
 /* width */
