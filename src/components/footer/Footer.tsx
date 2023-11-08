@@ -25,8 +25,8 @@ export default function Footer() {
 
 
         <div className={style.socialNetworks}>
-            {socNets.map(sc => 
-                <div className={style.socNet}>
+            {socNets.map((sc, index) => 
+                <div key={index} className={style.socNet}>
                     <img alt='social network' src={sc}/>
                 </div>
             )}

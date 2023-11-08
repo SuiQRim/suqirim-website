@@ -7,7 +7,7 @@ interface Props {
 
 const Content:FC<Props> = ({children}) => {
   return (
-    <div className={style.content}>
+    <div className={style.block}>
         {children}
     </div>
   )

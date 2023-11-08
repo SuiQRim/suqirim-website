@@ -1,13 +1,12 @@
 .game {
     display: grid;
     gap: 40px;
-    grid-template-columns: minmax(65%, 100%) fit-content(35%);
+    grid-template-columns: auto auto;
 }
 
 .bounty {
     animation-duration: 0.25s;
     animation-name: bounty_appearances;
-    margin-top: 40px;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -40,7 +39,6 @@
     flex-flow: wrap;
     flex-direction: column;
     gap: 40px;
-    margin-top: 40px;
 }
 
 .soloGame {

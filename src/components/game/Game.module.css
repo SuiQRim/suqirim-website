@@ -18,6 +18,10 @@
     border-radius: 12px;
 }
 
+.gameSolo .tier {
+    justify-content: center;
+}
+
 .gameSolo .icon img {
     height: 64px;
     border-radius: 6px 0px 0px 6px;

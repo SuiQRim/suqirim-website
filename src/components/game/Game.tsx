@@ -17,8 +17,8 @@ const Game:FC<Props> = ({game, hideLikes, solo : isSolo, className}) => {
   
     for (let i = 3; i > 0; i--) {
         likes.push(
-            <div className={style.like}>
-                <img alt='icon' key={i} src={game.tier < i? hollowLike : like }/>
+            <div key={i} className={style.like}>
+                <img alt='icon' src={game.tier < i? hollowLike : like }/>
             </div>
         );
     }
