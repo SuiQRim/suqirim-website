@@ -10,10 +10,9 @@ import Home from './pages/home/Home';
 
 function App() {
     const location = useLocation();
-    console.log(location)
     return (
         <div className='App'>
-            <Header mini={!(location.pathname === '/' || location.pathname === '/home')}/>
+            <Header mini={!(location.pathname === '/')}/>
             <Content>
                 <Routes>
                     <Route path='*' element={<Home/>}/>

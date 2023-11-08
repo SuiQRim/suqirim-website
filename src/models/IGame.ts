@@ -1,4 +1,4 @@
-export interface IContainer {
+export interface IGame {
     image : string,
     name : string,
     tier: number,

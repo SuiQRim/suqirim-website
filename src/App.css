@@ -2,11 +2,32 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-
 }
 
 body, p {
     margin: auto;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    border-radius: 12px;
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    border-radius: 12px;
+    background: #E25E3E;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }
 
 .App {

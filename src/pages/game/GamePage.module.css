@@ -1,16 +1,48 @@
 .game {
     display: grid;
-    gap: 20px;
-    grid-template-columns: 1fr fit-content(25%)
+    gap: 40px;
+    grid-template-columns: minmax(65%, 100%) fit-content(35%);
 }
 
 .bounty {
+    animation-duration: 0.25s;
+    animation-name: bounty_appearances;
+    margin-top: 40px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    text-align: center;
+    gap: 10px;
+    height: 568px;
+}
 
+@keyframes bounty_appearances {
+    from {
+        height: 0px;
+    }
+
+    to {
+        height: 568px;
+    }
+}
+
+.games {
+    padding: 0px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow: hidden;
+    overflow-y: scroll;
+    height: auto;
 }
 
 .profile {
-    padding: 40px;
+    display: flex;
+    flex-flow: wrap;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.soloGame {
+    width: 250px;
 }
