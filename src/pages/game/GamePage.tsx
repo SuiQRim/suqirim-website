@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { getGameContent } from '../../storage/game/games';
 import Game from '../../components/game/Game';
 import style from './GamePage.module.css'
 import Input from '../../ui/input/Input';
+import { IGame } from './../../models/IGame';
 
 type Props = {}
 
@@ -10,6 +11,24 @@ const GamePage = (props: Props) => {
 
     const games = getGameContent;
 
+    const [gameFilter, setGameFilter] = useState('');
+    
+    const [filteredGames, setfilteredGames] = useState<IGame[]>(games);
+    
+    const filterGamesBySearch = (event : React.ChangeEvent<HTMLInputElement>) => {
+
+        const value = event.target.value;
+        setGameFilter(value);
+
+        let updatedList = [...games];
+
+        updatedList = updatedList.filter((item) => 
+            item.name.toLowerCase().indexOf(value.toLowerCase()) !== -1
+        );
+        
+        setfilteredGames(updatedList);
+    };
+    
     return (
         <div className={style.game}>
             <div className={style.profile}>
@@ -38,8 +57,8 @@ const GamePage = (props: Props) => {
             </div>
             <div className={style.bounty}>
                 <h2>Пройденные игры</h2>
-                <Input type='text' placeholder='Найти игру'></Input>
-                <div className={style.games}>{games.map((g, index) => <Game key={index} game={g}></Game>)}</div>
+                <Input type='text' onChange={filterGamesBySearch} value={gameFilter} placeholder='Найти игру'></Input>
+                <div className={style.games}>{filteredGames.map((g, index) => <Game key={index} game={g}></Game>)}</div>
             </div>  
         </div>    
     )
