@@ -13,7 +13,7 @@ const socNets = [
 export default function Footer() {
   return (
     <div className={style.footer}>
-        <div style={{display: 'flex', gap: '40px'}}>
+        <div className={style.contacts}>
             <div>
                 +7-931-967-57-06 
             </div>

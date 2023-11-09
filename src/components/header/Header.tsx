@@ -11,16 +11,16 @@ type Props = {
     mini? : boolean
 }
 
-const Header : FC<Props> = (props) => {
+const Header : FC<Props> = ({mini}) => {
   return (
-    <div className={style.header}>
+    <div className={mini ? style.headerMini : style.header}>
         <div className={style.navPanel}>
             <Navigation icons={tabs} />
         </div>
     
         <div className={style.profilePanel}>
             <Link to='/'>
-                <img alt='icon' className={props.mini ? style.iconMini : style.icon} src={profile}/>
+                <img alt='icon' className={mini ? style.iconMini : style.icon} src={profile}/>
             </Link>
         </div>
     

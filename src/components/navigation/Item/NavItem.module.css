@@ -32,7 +32,6 @@ img {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    height: 32px;
     width: 100%;
 }
 
@@ -48,4 +47,16 @@ img {
     border: solid 3px black;
     border-radius: 4px;
     
+}
+
+@media (max-width: 980px) {
+
+    .image {
+        height: 64px;
+        width: 128px;
+    }
+    .bottomLine {
+        width: 142px;
+    }
+
 }

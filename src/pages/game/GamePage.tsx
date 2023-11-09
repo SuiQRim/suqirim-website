@@ -25,7 +25,7 @@ const GamePage = (props: Props) => {
         updatedList = updatedList.filter((item) => 
             item.name.toLowerCase().indexOf(value.toLowerCase()) !== -1
         );
-        
+
         setfilteredGames(updatedList);
     };
     
@@ -35,7 +35,7 @@ const GamePage = (props: Props) => {
                 
                 <div>
                     <h2>Me & Games</h2>
-                    <div>
+                    <div className={style.aboutMe}>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, a! Nulla minima dolores, optio possimus nobis tenetur aliquam exercitationem eligendi dicta. Debitis rem, dignissimos tenetur fugiat repellat cupiditate provident dolore? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae ut repellendus ipsa. Corrupti in libero facere fuga, eligendi repellendus perferendis provident minus reiciendis quibusdam ab quae obcaecati quasi commodi harum. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi placeat error vitae quis itaque cumque sapiente temporibus laborum magnam rem qui corrupti consequatur saepe repellendus, quibusdam dolorum, tenetur quisquam expedita!
                     </div>
                 </div>
@@ -50,7 +50,7 @@ const GamePage = (props: Props) => {
 
                 <div>
                     <h2>Катаю с друзьями</h2>
-                    <div>
+                    <div className={style.gamesWrap}>
                         <Game className={style.soloGame} game={{...games[1], name : 'Dota 2'}} solo hideLikes/>
                     </div>
                 </div>

@@ -1,15 +1,16 @@
-.header {
+.header,
+.headerMini {
     background-color: #FF9B50;
     padding: 24px 13% 24px 13%;
     width: 100%;
-    display: grid;   
+    display: grid; 
     gap: 40px;
     grid-template-columns: 2fr 1fr;
 }
 
+
 .navPanel {
     display: flex;
-    flex-direction:column;
     justify-content: flex-start;
     align-items: flex-start;
 }
@@ -39,4 +40,38 @@
 .icon:hover,
 .iconMini:hover {
     border-width: 0px;
+}
+
+@media (max-width: 980px) {
+    .header,
+    .headerMini{
+        display: flex;
+        justify-content: center;
+        padding: 20px 10px;
+        gap: 10px;
+    }
+
+    .header {
+        flex-direction: column;
+        gap: 40px;
+        padding-bottom: 40px;
+    }
+
+    .icon {
+        height: 420px;
+        width: 420px;
+    }
+    .iconMini {
+        height: 123px;
+        width: 123px;
+    }
+
+    .navPanel {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .profilePanel {
+        justify-content: center;
+    }
 }
