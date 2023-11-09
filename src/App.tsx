@@ -5,7 +5,6 @@ import Footer from './components/footer/Footer';
 import {Routes, Route,useLocation} from 'react-router-dom';
 import It from './pages/it/It';
 import GamePage from './pages/game/GamePage';
-import Content from './components/content/Content';
 import Home from './pages/home/Home';
 
 function App() {
@@ -13,7 +12,7 @@ function App() {
     return (
         <div className='App'>
             <Header mini={!(location.pathname === '/')}/>
-            <Content>
+            <div className='content'>
                 <Routes>
                     <Route path='*' element={<Home/>}/>
                     <Route path='/it' element={<It/>}/>
@@ -21,7 +20,7 @@ function App() {
                     <Route path='/sport'/>
                     <Route path='/music'/>
                 </Routes>     
-            </Content>
+            </div>
             <Footer/>
         </div>
   );

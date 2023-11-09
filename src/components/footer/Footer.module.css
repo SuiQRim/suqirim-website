@@ -37,3 +37,25 @@
 .socNet:hover img {
     border-radius: 8px;
 }
+
+.contacts {
+    display: flex;
+    gap: 40px;
+}
+
+@media (max-width: 980px) {
+    .socNet {
+        height: 96px;
+        width: 96px;
+        border-radius: 16px;
+        border-width: 8px;
+    }
+    .socNet img {
+        border-radius: 8px;
+    }
+    .contacts {
+        font-size: 22px;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
