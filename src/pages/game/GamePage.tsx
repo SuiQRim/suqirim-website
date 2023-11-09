@@ -16,23 +16,22 @@ const GamePage = (props: Props) => {
                 
                 <div>
                     <h2>Me & Games</h2>
-                    <div style={{marginTop :'10px'}}>
-                        Тут накидаю какую-то инфу Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi incidunt voluptatum asperiores possimus sit dolore exercitationem aspernatur pariatur ad, recusandae soluta ipsa odit reprehenderit vitae libero consequuntur dicta! Nulla, quam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores aperiam, quibusdam, et eaque iusto quaerat omnis voluptatum sit quo dolorem libero quasi? Similique eaque rem esse omnis aliquid ipsam cupiditate!
+                    <div>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, a! Nulla minima dolores, optio possimus nobis tenetur aliquam exercitationem eligendi dicta. Debitis rem, dignissimos tenetur fugiat repellat cupiditate provident dolore? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae ut repellendus ipsa. Corrupti in libero facere fuga, eligendi repellendus perferendis provident minus reiciendis quibusdam ab quae obcaecati quasi commodi harum. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi placeat error vitae quis itaque cumque sapiente temporibus laborum magnam rem qui corrupti consequatur saepe repellendus, quibusdam dolorum, tenetur quisquam expedita!
                     </div>
                 </div>
 
                 <div>
                     <h2>В активном прохождении</h2>
-                    <div style={{display: 'flex', gap : '20px 40px', marginTop :'10px', flexFlow: 'wrap'}}>
+                    <div className={style.gamesWrap}>
                         <Game className={style.soloGame} game={{...games[1], name : 'Baldur\'s Gate 3'}} solo hideLikes/>
                         <Game className={style.soloGame} game={{...games[1], name : 'Hades'}} solo hideLikes/>
-
                     </div>
                 </div>
 
                 <div>
                     <h2>Катаю с друзьями</h2>
-                    <div style={{marginTop :'10px'}}>
+                    <div>
                         <Game className={style.soloGame} game={{...games[1], name : 'Dota 2'}} solo hideLikes/>
                     </div>
                 </div>

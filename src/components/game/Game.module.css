@@ -1,8 +1,9 @@
 .gameInList {
     display: flex;
-    border: #FF9B50 solid;
+    border: #FFBB5C solid;
     border-width: 0px 0px 16px 0px;
     border-radius: 8px;
+    box-shadow: 6px 6px gray;
 }
 
 .gameInList .icon img {
@@ -12,9 +13,9 @@
 
 .gameSolo {
     display: flex;
-    border: #FF9B50 solid;
-    border-width: 6px;
+    background-color: #FFBB5C;
     border-radius: 12px;
+    box-shadow: 4px 4px gray;
 }
 
 .gameSolo .tier {
@@ -23,10 +24,10 @@
 
 .gameSolo .icon img {
     height: 64px;
-    border-radius: 6px 0px 0px 6px;
+    border-radius: 12px 0px 0px 12px;
+    
 }
 .content {
-    padding: 6px 12px;
     width: 100%;
     display: grid;
     justify-self: flex-end;
@@ -43,13 +44,23 @@
     display: grid;
     align-items:center;
     justify-content: center;
+    padding: 0px 16px;
     font-size: 18px;
     font-weight: bolder;
 }
+
 .tier {
     display: flex;
     justify-content: flex-end;
-    gap: 8px
+
+}
+
+.likes {
+    display: flex;
+    padding: 4px 16px 0px 16px;
+    gap: 8px;
+    border-radius: 12px 12px 0px 0px;
+    background-color: #FFBB5C;
 }
 
 .like {
@@ -61,4 +72,5 @@
 .like img {
     height: 100%;
     width: 100%;
+    filter: drop-shadow(2px 2px  black);
 }

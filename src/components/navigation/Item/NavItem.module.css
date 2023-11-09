@@ -1,6 +1,11 @@
-.navItem{
+.navItem {
     transition: 0.25s;
     cursor : pointer;
+    
+}
+
+img {
+    transition: 0.25s;
 }
 
 .navItem:hover {
@@ -8,23 +13,37 @@
     -webkit-filter: invert(100%); /* Safari/Chrome */
     filter: invert(100%);
 }
-.navItem:active {
+.navItem:active{
     transform: scale(1.1);
     -webkit-filter: invert(85%); /* Safari/Chrome */
     filter: invert(85%);
 }
 
+.activeLink img {
+    -webkit-filter: invert(100%); /* Safari/Chrome */
+    filter: invert(100%);
+}
+.activeLink hr {
+    -webkit-filter: invert(100%); /* Safari/Chrome */
+    filter: invert(100%);
+}
+
 .icon {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 32px;
+    width: 100%;
+}
+
+.image {
     height: 32px;
     width: 64px;
 }
 
-.image {
-    width: 100%;
-    height: 100%;
-}
-
 .bottomLine {
+    transition: 0.25s;
+    width: 72px;
     margin-top: 5px;
     border: solid 3px black;
     border-radius: 4px;
