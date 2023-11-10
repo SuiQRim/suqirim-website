@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { getGameContent } from '../../storage/game/games';
+import { GameStatistic } from '../../storage/game/games';
 import Game from '../../components/game/Game';
 import style from './GamePage.module.css'
 import Input from '../../ui/input/Input';
@@ -9,18 +9,20 @@ type Props = {}
 
 const GamePage = (props: Props) => {
 
-    const games = getGameContent;
+    const passedGames = GameStatistic.passed;
+    const activeGames = GameStatistic.active;
+    const playWithFriendGames = GameStatistic.playWithFriends;
 
     const [gameFilter, setGameFilter] = useState('');
     
-    const [filteredGames, setfilteredGames] = useState<IGame[]>(games);
+    const [filteredGames, setfilteredGames] = useState<IGame[]>(passedGames);
     
     const filterGamesBySearch = (event : React.ChangeEvent<HTMLInputElement>) => {
 
         const value = event.target.value;
         setGameFilter(value);
 
-        let updatedList = [...games];
+        let updatedList = [...passedGames];
 
         updatedList = updatedList.filter((item) => 
             item.name.toLowerCase().indexOf(value.toLowerCase()) !== -1
@@ -36,22 +38,27 @@ const GamePage = (props: Props) => {
                 <div>
                     <h2>Me & Games</h2>
                     <div className='text'>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, a! Nulla minima dolores, optio possimus nobis tenetur aliquam exercitationem eligendi dicta. Debitis rem, dignissimos tenetur fugiat repellat cupiditate provident dolore? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae ut repellendus ipsa. Corrupti in libero facere fuga, eligendi repellendus perferendis provident minus reiciendis quibusdam ab quae obcaecati quasi commodi harum. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi placeat error vitae quis itaque cumque sapiente temporibus laborum magnam rem qui corrupti consequatur saepe repellendus, quibusdam dolorum, tenetur quisquam expedita!
+                        {GameStatistic.aboutMe}
                     </div>
                 </div>
 
                 <div>
                     <h2>В активном прохождении</h2>
                     <div className={style.gamesWrap}>
-                        <Game className={style.soloGame} game={{...games[1], name : 'Baldur\'s Gate 3'}} solo hideLikes/>
-                        <Game className={style.soloGame} game={{...games[1], name : 'Hades'}} solo hideLikes/>
+                        {
+                            activeGames.map((g, index) => 
+                                <Game className={style.soloGame} key={index} game={g}  solo hideLikes></Game>)
+                        }
                     </div>
                 </div>
 
                 <div>
                     <h2>Катаю с друзьями</h2>
                     <div className={style.gamesWrap}>
-                        <Game className={style.soloGame} game={{...games[1], name : 'Dota 2'}} solo hideLikes/>
+                    {
+                            playWithFriendGames.map((g, index) => 
+                                <Game className={style.soloGame} key={index} game={g}  solo hideLikes></Game>)
+                        }
                     </div>
                 </div>
             </div>

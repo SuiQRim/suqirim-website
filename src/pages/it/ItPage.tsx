@@ -8,12 +8,14 @@ const ItPage = () => {
     const it = itStore;
     const itPage = useRef<HTMLDivElement>(null)
 
-    const harsSkillHolder = 'Выберите Hard Skill...'
-    const [hardSkill, setHardSkill] = useState<string>(harsSkillHolder);
+    const hardSkillHolder = 'Выберите Hard Skill...'
+    const hardSkilldefaultValue = 'Просто хорошо знаком. Есть опыт, но выделить что-то ключевое не могу.'
+
+    const [hardSkill, setHardSkill] = useState<string>(hardSkillHolder);
     function clearDescription () {
-        if(hardSkill !== harsSkillHolder){
+        if(hardSkill !== hardSkillHolder){
             console.log('save')
-            setHardSkill(harsSkillHolder);
+            setHardSkill(hardSkillHolder);
         }
     }
 
@@ -23,6 +25,8 @@ const ItPage = () => {
             console.log('set')
             setHardSkill(value);
         }
+        if(value === '')
+            setHardSkill(hardSkilldefaultValue);
     }
     
     useEffect(() => {
@@ -58,7 +62,7 @@ const ItPage = () => {
                         <Toggle key={index} name={hs.name} description={hs.description} changeDescription={changeHardSkill}/>)
                     }
                 </div>
-                <div className={style.hardSkillDescription}>
+                <div className={hardSkill !== hardSkillHolder ? style.hardSkillDescription : style.hardSkillDescriptionEmpty}>
                     {hardSkill} 
                 </div>
                 </div>

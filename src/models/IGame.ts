@@ -1,6 +1,6 @@
 export interface IGame {
     image : string,
     name : string,
-    tier: number,
+    tier?: number,
     steamLink: string
 }

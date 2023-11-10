@@ -21,14 +21,23 @@
     gap: 10px;
 }
 
-.hardSkillDescription {
+.hardSkillDescription,
+.hardSkillDescriptionEmpty {
     display: flex;
+    min-height: 240px;
     justify-content: center;
     align-items: center;
-    padding: 24px;
+    padding: 12px 24px;
     text-align: center;
-    border: solid 8px #FFBB5C;
-    border-radius: 16px;
+    border: solid #FFBB5C;
+    border-width: 12px 0px ;
+    border-radius: 12px;
+    font-size: 18px;
+}
+
+.hardSkillDescriptionEmpty {
+    color: gray;
+    font-size: 34px;
 }
 
 @media (max-width: 1260px) {

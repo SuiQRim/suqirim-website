@@ -15,13 +15,19 @@ const Game:FC<Props> = ({game, hideLikes, solo : isSolo, className}) => {
 
     const likes = [];
   
-    for (let i = 3; i > 0; i--) {
-        likes.push(
-            <div key={i} className={style.like}>
-                <img alt='icon' src={game.tier < i? hollowLike : like }/>
-            </div>
-        );
+
+    if(game.tier !== undefined){
+        for (let i = 3; i > 0; i--) {
+            likes.push(
+                <div key={i} className={style.like}>
+                    <img alt='icon' src={game.tier < i? hollowLike : like }/>
+                </div>
+            );
+        } 
     }
+    
+    
+    
 
     return (
         <div className={className}>
@@ -34,7 +40,7 @@ const Game:FC<Props> = ({game, hideLikes, solo : isSolo, className}) => {
                         <span>{game.name}</span>
                     </div>
                     {
-                        hideLikes ||
+                        (hideLikes && likes.length !== 0) ||
                         <div className={style.tier}>
                             <div className={style.likes}>
                                 {likes} 
