@@ -1,0 +1,54 @@
+.it {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    padding: 40px 64px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.hardSkills {
+    display: grid;
+    grid-template-columns: 60% auto;
+    gap: 40px;
+}
+
+.hardSkillsWrapper {
+    height: fit-content;
+    display: flex;
+    flex-flow: wrap;
+    gap: 10px;
+}
+
+.hardSkillDescription {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    text-align: center;
+    border: solid 8px #FFBB5C;
+    border-radius: 16px;
+}
+
+@media (max-width: 1260px) {
+    .hardSkills {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    } 
+}
+
+@media (max-width: 980px) {
+
+    .hardSkillDescription {
+        max-height: 400px;
+        align-items: start;
+        overflow: hidden;
+        overflow-y: auto;
+        gap: 20px;
+        border-width: 16px;
+        border-radius: 32px;
+        font-size: 32px;
+    }
+}

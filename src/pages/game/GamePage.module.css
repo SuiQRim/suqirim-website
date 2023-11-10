@@ -5,17 +5,6 @@
     grid-template-columns: 1fr auto;
     overflow: hidden;
     overflow-y: auto;
-    animation-duration: 0.25s;
-    animation-name: appearances;
-}
-
-@keyframes appearances {
-    from {
-        height: 0px;
-    }
-    to {
-        height: 100%;
-    }
 }
 
 .bounty {
@@ -46,18 +35,10 @@
     gap: 20px;
 }
 
-.aboutMe {
-    font-size: 18px;
-}
-
 .gamesWrap {
     display: flex;
     gap: 20px 40px;
     flex-flow: wrap;
-}
-
-.profile h2 {
-    margin-bottom: 10px;
 }
 
 .soloGame {
@@ -73,13 +54,6 @@
 }
 
 @media (max-width: 980px) {
-
-    h2 {
-        font-size: 56px;
-    }
-    .aboutMe {
-        font-size: 48px;
-    }
 
     .gamesWrap {
         margin: 0px 40px;
