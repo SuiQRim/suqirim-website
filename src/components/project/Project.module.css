@@ -60,23 +60,3 @@ a, u {
     gap: 4px;
 
 }
-.technologie {
-    cursor: pointer;
-    transition: 0.25s;
-    background: #FF9B50;
-    font-weight: bolder;
-    padding: 4px 16px;
-    align-items: flex-end;
-    height: fit-content;
-    border-radius: 6px;
-    font-size: 12px;
-}
-
-.technologie:hover {
-    background-color: #FFBB5C;
-    color: #C63D2F;
- 
-}
-.technologie:active {
-    background-color: #C63D2F;
-}

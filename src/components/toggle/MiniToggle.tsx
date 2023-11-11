@@ -1,13 +1,14 @@
 import React, { FC } from 'react'
-import style from './Toggle.module.css'
+import style from './MiniToggle.module.css'
 
-export interface IToggleProps {
+export interface IMiniToggleProps {
     name : string,
     description : string,
     changeDescription: (value: string) => void,
 }
 
-const Toggle:FC<IToggleProps> = ({name, description, changeDescription}) => {
+const MiniToggle:FC<IMiniToggleProps> = ({name, description, changeDescription}) => {
+
 
     const hasDescription = (description === '')
     
@@ -17,10 +18,10 @@ const Toggle:FC<IToggleProps> = ({name, description, changeDescription}) => {
     }
 
     return (
-        <div className={hasDescription ? style.simpleToggle : style.toggle} onClick={setDescription}>
+        <div className={hasDescription ? style.simpleToggleMini : style.toggleMini} onClick={setDescription}>
             <div>{name}</div>
         </div>
   )
 }
 
-export default Toggle;
+export default MiniToggle;

@@ -1,0 +1,35 @@
+.toggleMini,
+.simpleToggleMini {
+    cursor: pointer;
+    transition: 0.25s;
+    background: #FF9B50;
+    font-weight: bolder;
+    padding: 4px 16px;
+    align-items: flex-end;
+    height: fit-content;
+    border-radius: 6px;
+    font-size: 12px;
+}
+
+.simpleToggleMini {
+    font-weight: normal;
+    cursor: default;
+}
+
+.toggleMini:hover {
+    background-color: #FFBB5C;
+    color: #C63D2F;
+ 
+}
+.toggleMini:active {
+    background-color: #C63D2F;
+}
+
+@media (max-width: 980px) {
+
+    .toggleMini {
+        padding: 20px 40px;
+        border-radius: 24px;
+        font-size: 38px;
+    }
+}

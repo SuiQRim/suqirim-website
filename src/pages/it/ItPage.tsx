@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react'
 import style from './ItPage.module.css'
-import Toggle from '../../components/toggle/Toggle'
 import itStore from './../../storage/it/it';
 import Project from '../../components/project/Project';
+import Toggle from '../../components/toggle/Toggle';
 
 
 const hardSkillHolder = 'Выберите Hard Skill или используемую в проекте технологию'

@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import style from './Project.module.css'
 import IProject from '../../models/IProject'
-import Toggle from '../toggle/Toggle'
+import MiniToggle from '../toggle/MiniToggle'
 
 type Props = {
     project : IProject,
@@ -24,7 +24,7 @@ const Project:FC<Props> = ({project, changeDescription}) => {
             <div className={style.technologies}>
                 <div className={style.technologieWrapper}>
                     {project.technologies.map((hs, index) => 
-                        <Toggle className={style.technologie} key={index} name={hs.name} description={hs.description} changeDescription={changeDescription}/>)
+                        <MiniToggle key={index} name={hs.name} description={hs.description} changeDescription={changeDescription}/>)
                     }
                 </div>
             </div>
