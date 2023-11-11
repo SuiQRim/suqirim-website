@@ -5,19 +5,19 @@ export interface IToggleProps {
     name : string,
     description : string,
     changeDescription: (value: string) => void
+    className? : string
 }
 
-const Toggle:FC<IToggleProps> = ({name, description, changeDescription}) => {
+const Toggle:FC<IToggleProps> = ({name, description, changeDescription, className}) => {
 
     const setDescription = () => {
-        changeDescription(description);
+        if(description !== undefined)
+            changeDescription(description);
     }
 
     return (
-        <div className={style.toggle}>
-            <div className={style.name} onClick={setDescription}>
-                {name}
-            </div>
+        <div className={className ?? style.toggle} onClick={setDescription}>
+            <div>{name}</div>
         </div>
   )
 }

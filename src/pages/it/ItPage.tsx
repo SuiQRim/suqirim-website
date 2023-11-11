@@ -3,71 +3,40 @@ import style from './ItPage.module.css'
 import Toggle from '../../components/toggle/Toggle'
 import itStore from './../../storage/it/it';
 import Project from '../../components/project/Project';
-import IProject from '../../models/IProject';
 
 
-const projects: IProject [] = [
-    {
-        name : 'suiqrim-website ',
-        description : 'Вебсайт, которвый вы сейчас просматриваете. Он красивый, удобный и информативный',
-        link : 'https://github.com/SuiQRim/suqirim-website'
-    },
-    {
-        name : 'ToyRuParser',
-        description : 'Парсер сайта-каталога игрушек. Приложение сделано легко адаптируемым к изменениям сайта. Парсинг происходит учитывая пагинацию каталога',
-        link : 'https://github.com/SuiQRim/ToyRuParser'
-    },
-    {
-        name : 'SkillProfi ',
-        description : 'CRM с серверной частью на ASP.NET и приложениями для администрирования и просмотра',
-        link : 'https://github.com/SuiQRim/ToyRuParser'
-    },
-    {
-        name : 'SnakeGame',
-        description : 'Консольная змейка, с меню и локальным лидербордом. Реализовал очень крутой интерфейс для консоли',
-        link : 'https://github.com/SuiQRim/SnakeGame'
-    },
-]
+const hardSkillHolder = 'Выберите Hard Skill или используемую в проекте технологию'
 
 const ItPage = () => {
 
     const it = itStore;
     const itPage = useRef<HTMLDivElement>(null)
-
-    const hardSkillHolder = 'Выберите Hard Skill...'
-    const hardSkilldefaultValue = 'Просто хорошо знаком. Есть опыт, но выделить что-то ключевое не могу.'
+    const projects = it.projects;
 
     const [hardSkill, setHardSkill] = useState<string>(hardSkillHolder);
-    function clearDescription () {
-        if(hardSkill !== hardSkillHolder){
-            console.log('save')
-            setHardSkill(hardSkillHolder);
-        }
-    }
 
     
     function changeHardSkill (value: string) {
         if(hardSkill !== value) {
-            console.log('set')
             setHardSkill(value);
         }
-        if(value === '')
-            setHardSkill(hardSkilldefaultValue);
     }
-    
+
     useEffect(() => {
         const element = itPage.current;   
+        
         if (!element) return;
-    
+
         const handleButtonClick = (e: MouseEvent) => {
-            clearDescription()
-            console.log('click')
+            if(hardSkill !== hardSkillHolder){
+                setHardSkill(hardSkillHolder);
+            }
         };
-    
+        
         element.addEventListener("click", handleButtonClick);
         return () => {
             element.removeEventListener("click", handleButtonClick);
-        };
+        }
     }, [hardSkill]);
     
     return (
@@ -97,7 +66,7 @@ const ItPage = () => {
             <div>
                 <h2>Проекты</h2>
                 <div className={style.projectsWrapper}>
-                    {projects.map(p => <Project project={p}/>)}
+                    {projects.map((p, index) => <Project key={index} project={p} changeDescription={changeHardSkill}/>)}
                 </div>
             </div>
         </div>

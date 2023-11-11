@@ -12,6 +12,8 @@
     display: grid;
     grid-template-columns: 55% auto;
     gap: 40px;
+    align-items: center;
+    min-height: 180px;
 }
 
 .hardSkillsWrapper {
@@ -25,6 +27,7 @@
 .hardSkillDescriptionEmpty {
     display: flex;
     justify-content: center;
+    align-items: center;
     text-align: center;
     border-radius: 12px;
     font-size: 18px;
@@ -33,13 +36,15 @@
 .hardSkillDescriptionEmpty {
     align-items: center;
     color: gray;
-    font-size: 34px;
+    font-size: 26px;
 }
 
 .projectsWrapper {
     display: flex;
+    overflow: auto;
     justify-content: space-between;
-    flex-flow: wrap;
+    height: 420px;
+    padding: 20px 20px;
     gap: 20px;
     white-space: pre-line;
 }

@@ -1,19 +1,17 @@
 .toggle {
-}
-
-.name {
     transition: 0.25s;
     cursor: pointer;
     white-space: nowrap;
     padding: 10px 20px;
     border-radius: 12px;
+    font-weight: bolder;
     background-color: #FF9B50;
 }
 
-.name:hover {
+.toggle:hover {
     background-color: #FFBB5C;
 }
-.name:active {
+.toggle:active {
     background-color: #E25E3E;
 }
 

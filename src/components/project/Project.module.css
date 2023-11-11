@@ -1,8 +1,9 @@
 .project {
     display: grid;
-    grid-template-rows: auto 1fr auto;
+    height: 100%;
+    grid-template-rows: auto 1fr auto auto;
     width: 340px;
-    background: #FFBB5C;
+    border: #FFBB5C 6px solid;
     padding: 30px 40px 20px 40px;
     border-radius: 12px;
 }
@@ -15,24 +16,67 @@
 }
 
 .description {
-    font-size: 18px;
+    font-size: 16px;
     text-align: center;
-    overflow: hidden;
 }
 a, u {
     text-decoration: none;
 }
 .linkWrapper {
     margin: 10px 0px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
 }
 
 .link {
-    color: #C63D2F;
+    text-align: center;
+    transition: 0.25s;
+    color: black;
     font-weight: bolder;
+    color: black;
     background: #FF9B50;
     padding: 4px 16px;
+    border: solid 2px black;
     border-radius: 6px;
+}
+
+.link:hover {
+    background-color: #FFBB5C;
+}
+.link:active {
+    background-color: #C63D2F;
+}
+
+.technologies {
+    margin: 10px 0px 0px 0px;
+    display: flex;
+    align-items: flex-end;
+    min-height: 80px;
+}
+
+.technologieWrapper {
+    display: flex;
+    flex-flow: wrap-reverse;
+    justify-content: center;
+    width: 100%;
+    gap: 4px;
+
+}
+.technologie {
+    cursor: pointer;
+    transition: 0.25s;
+    background: #FF9B50;
+    font-weight: bolder;
+    padding: 4px 16px;
+    align-items: flex-end;
+    height: fit-content;
+    border-radius: 6px;
+    font-size: 12px;
+}
+
+.technologie:hover {
+    background-color: #FFBB5C;
+    color: #C63D2F;
+ 
+}
+.technologie:active {
+    background-color: #C63D2F;
 }
