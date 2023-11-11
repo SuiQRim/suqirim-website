@@ -10,7 +10,7 @@
 
 .hardSkills {
     display: grid;
-    grid-template-columns: 60% auto;
+    grid-template-columns: 55% auto;
     gap: 40px;
 }
 
@@ -24,20 +24,24 @@
 .hardSkillDescription,
 .hardSkillDescriptionEmpty {
     display: flex;
-    min-height: 240px;
     justify-content: center;
-    align-items: center;
-    padding: 12px 24px;
     text-align: center;
-    border: solid #FFBB5C;
-    border-width: 12px 0px ;
     border-radius: 12px;
     font-size: 18px;
 }
 
 .hardSkillDescriptionEmpty {
+    align-items: center;
     color: gray;
     font-size: 34px;
+}
+
+.projectsWrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: wrap;
+    gap: 20px;
+    white-space: pre-line;
 }
 
 @media (max-width: 1260px) {
@@ -50,14 +54,21 @@
 
 @media (max-width: 980px) {
 
+    .hardSkills {
+        gap: 20px
+    }   
+
     .hardSkillDescription {
         max-height: 400px;
         align-items: start;
         overflow: hidden;
         overflow-y: auto;
-        gap: 20px;
-        border-width: 16px;
-        border-radius: 32px;
+        padding: 40px;
         font-size: 32px;
     }
+
+    .hardSkillDescriptionEmpty {
+        font-size: 52px;
+    }
+
 }

@@ -1,0 +1,38 @@
+.project {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    width: 340px;
+    background: #FFBB5C;
+    padding: 30px 40px 20px 40px;
+    border-radius: 12px;
+}
+
+.name {
+    text-align: center;
+    font-size: 22px;
+    font-weight: bolder;
+    margin: 4px;
+}
+
+.description {
+    font-size: 18px;
+    text-align: center;
+    overflow: hidden;
+}
+a, u {
+    text-decoration: none;
+}
+.linkWrapper {
+    margin: 10px 0px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.link {
+    color: #C63D2F;
+    font-weight: bolder;
+    background: #FF9B50;
+    padding: 4px 16px;
+    border-radius: 6px;
+}

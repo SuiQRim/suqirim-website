@@ -2,6 +2,32 @@ import React, { useEffect, useRef, useState } from 'react'
 import style from './ItPage.module.css'
 import Toggle from '../../components/toggle/Toggle'
 import itStore from './../../storage/it/it';
+import Project from '../../components/project/Project';
+import IProject from '../../models/IProject';
+
+
+const projects: IProject [] = [
+    {
+        name : 'suiqrim-website ',
+        description : 'Вебсайт, которвый вы сейчас просматриваете. Он красивый, удобный и информативный',
+        link : 'https://github.com/SuiQRim/suqirim-website'
+    },
+    {
+        name : 'ToyRuParser',
+        description : 'Парсер сайта-каталога игрушек. Приложение сделано легко адаптируемым к изменениям сайта. Парсинг происходит учитывая пагинацию каталога',
+        link : 'https://github.com/SuiQRim/ToyRuParser'
+    },
+    {
+        name : 'SkillProfi ',
+        description : 'CRM с серверной частью на ASP.NET и приложениями для администрирования и просмотра',
+        link : 'https://github.com/SuiQRim/ToyRuParser'
+    },
+    {
+        name : 'SnakeGame',
+        description : 'Консольная змейка, с меню и локальным лидербордом. Реализовал очень крутой интерфейс для консоли',
+        link : 'https://github.com/SuiQRim/SnakeGame'
+    },
+]
 
 const ItPage = () => {
 
@@ -67,6 +93,13 @@ const ItPage = () => {
                 </div>
                 </div>
             </div>        
+
+            <div>
+                <h2>Проекты</h2>
+                <div className={style.projectsWrapper}>
+                    {projects.map(p => <Project project={p}/>)}
+                </div>
+            </div>
         </div>
   )
 }
