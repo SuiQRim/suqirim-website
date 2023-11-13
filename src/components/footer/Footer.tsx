@@ -18,7 +18,7 @@ export default function Footer() {
                 +7-931-967-57-06 
             </div>
             <div>
-                romikkimor123@gmail.com
+                samadioroman@gmail.com
             </div>
         </div>
 

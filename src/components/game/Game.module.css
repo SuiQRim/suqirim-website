@@ -1,19 +1,19 @@
 .gameInList {
     display: flex;
-    border: #FFBB5C solid;
-    border-width: 0px 0px 16px 0px;
-    border-radius: 8px;
-    box-shadow: 6px 6px gray;
+    border: #FF9B50 solid;
+    border-width: 8px 8px 8px 8px;
+    border-radius: 16px 16px 16px 16px;
+    background: #fdfaf6;
 }
 
 .gameInList .icon img {
     height: 96px;
-    border-radius: 8px 8px 0px 0px;
+    border-radius: 8px 0px 0px 8px;
 }
 
 .gameSolo {
     display: flex;
-    background-color: #FFBB5C;
+    background-color: #FF9B50;
     border-radius: 12px;
     box-shadow: 4px 4px gray;
 }
@@ -59,8 +59,8 @@
     display: flex;
     padding: 4px 16px 0px 16px;
     gap: 8px;
-    border-radius: 12px 12px 0px 0px;
-    background-color: #FFBB5C;
+    border-radius: 16px 0px 0px 0px;
+    background-color: #FF9B50;
 }
 
 .like {
@@ -90,7 +90,6 @@
     
     .gameSolo {
         display: flex;
-        background-color: #FFBB5C;
         border-radius: 24px;
         box-shadow: 8px 8px gray;
     }

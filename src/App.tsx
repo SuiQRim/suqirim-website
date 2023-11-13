@@ -15,13 +15,15 @@ function App() {
         <div className='App'>
             <Header mini={!(location.pathname === '/')}/>
             <div className='content'>
-                <Routes>
-                    <Route path='*' element={<Home/>}/>
-                    <Route path='/it' element={<ItPage/>}/>
-                    <Route path='/game' element={<GamePage/>}/>
-                    <Route path='/sport'  element={<SportPage/>}/>
-                    <Route path='/music' element={<MusicPage/>}/>
-                </Routes>     
+                <div className='contentWrapper'>
+                    <Routes>
+                        <Route path='*' element={<Home/>}/>
+                        <Route path='/it' element={<ItPage/>}/>
+                        <Route path='/game' element={<GamePage/>}/>
+                        <Route path='/sport'  element={<SportPage/>}/>
+                        <Route path='/music' element={<MusicPage/>}/>
+                    </Routes>
+                </div>   
             </div>
             <Footer/>
         </div>

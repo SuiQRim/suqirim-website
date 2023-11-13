@@ -1,47 +1,76 @@
 .header,
 .headerMini {
-    background-color: #FF9B50;
-    padding: 24px 13% 24px 13%;
+    transition: 0.25s;
+    background-color: #724939;
+    padding: 0px 18%;
     width: 100%;
     display: grid; 
+    height: fit-content;
+    align-items: start;
     gap: 40px;
     grid-template-columns: 2fr 1fr;
 }
 
-
-.navPanel {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+.header .iconWrapper  {
+    height: 360px;
+    width:  360px;
 }
 
-.profilePanel,
-.profilePanelMini{
+.navPanel {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: end;
+}
+
+.profilePanel {
     display: flex;
     justify-content: flex-end;
 }
 
-.iconMini {
+
+.iconWrapper {
+    transition: 0.25s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
-    transition: 0.2s;
-    height: 70.71px;
-    width: 70.71px;
-    border-radius : 12px;
-    border: solid 6px #E25E3E;
+    height: 72px;
+    width: 72px;
 }
 
 
 .icon {
+    transition: 0.25s;
     cursor: default;
-    transition: 0.2s;
-    height: 280px;
-    width: 280px;
-    border-radius : 32px;
+    height: 100%;
+    border-radius : 24px;
 }
-.icon:hover,
-.iconMini:hover {
-    border-width: 0px;
+
+.headerMini .icon {
+    cursor: pointer;
+    height: 86%;
+    width: 86%;
 }
+
+.headerMini .icon:hover {
+    height: 100%;
+    width:  100%;
+}
+
+.headerMini .icon img {
+    height: 100%;
+    border-radius: 12px;
+}
+
+.header .icon img {
+    height: 100%;
+    border-radius: 48px;
+}
+
+
+
+
 
 @media (max-width: 980px) {
     .header,

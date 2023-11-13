@@ -1,26 +1,26 @@
 .footer {
-    margin-top: auto;
-    background: #FF9B50;
-    min-height: 86px;
-    padding: 20px 13%;
+    background-color: #724939;
+    padding: 0px 18%;
+    height: fit-content;
     display: flex;
     align-items: center;
     gap: 80px;
-    justify-content:space-between
+    justify-content:space-between;
 }
 
 .socialNetworks {
+    padding: 4px 0px;
     display: flex;
+    align-items: center;
+    height: 48px;
     gap: 10px;
 }
 
 .socNet {
+    border-radius: 12px;
+    height: 86%;
     transition: 0.25s;
     cursor: pointer;
-    height: 48px;
-    width: 48px;
-    border: 4px #E25E3E solid;
-    border-radius: 8px;
 }
 
 .socNet:hover {
@@ -28,17 +28,15 @@
 }
 
 .socNet img {
+    border-radius: 6px;
     transition: 0.25s;
-    border-radius: 4px;
-    width: 100%;
     height: 100%;
 }
 
-.socNet:hover img {
-    border-radius: 8px;
-}
-
 .contacts {
+    font-weight: bolder;
+    color: #e2e2e2;
+    font-size: 12px;
     display: flex;
     gap: 40px;
 }

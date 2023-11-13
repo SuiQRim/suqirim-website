@@ -1,9 +1,6 @@
 .navigation {
     display: flex;
-    justify-content: space-around;
-    padding: 14px 64px;
     gap: 40px;
-    background-color: #E25E3E;
     border-radius: 12px;
 }
 

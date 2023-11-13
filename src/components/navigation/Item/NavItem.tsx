@@ -15,8 +15,6 @@ const NavItem:FC<Props> = (props) => {
             <div className={style.icon}>
                 <img alt='icon' className={style.image} src={props.image}></img>
             </div>
-            <hr className={style.bottomLine}></hr>
-
         </NavLink>
     )
 }

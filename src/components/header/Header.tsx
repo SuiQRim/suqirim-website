@@ -18,10 +18,14 @@ const Header : FC<Props> = ({mini}) => {
             <Navigation icons={tabs} />
         </div>
     
-        <div className={mini ? style.profilePanelMini : style.profilePanel}>
-            <Link to='/'>
-                <img alt='icon' className={mini ? style.iconMini : style.icon} src={profile}/>
+        <div className={style.profilePanel}>
+
+            <Link className={style.iconWrapper} to='/'>
+                <div className={style.icon}>
+                    <img alt='icon' src={profile}/>
+                </div>
             </Link>
+
         </div>
     
     </div>

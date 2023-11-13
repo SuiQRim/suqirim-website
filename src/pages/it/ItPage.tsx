@@ -52,14 +52,15 @@ const ItPage = () => {
                 <h2>Hard Skills</h2>
                 <div className={style.hardSkills}>
                     
-                <div className={style.hardSkillsWrapper}>
-                    {it.hardSkills.map((hs, index) => 
-                        <Toggle key={index} name={hs.name} description={hs.description} changeDescription={changeHardSkill}/>)
-                    }
-                </div>
-                <div className={hardSkill !== hardSkillHolder ? style.hardSkillDescription : style.hardSkillDescriptionEmpty}>
-                    {hardSkill} 
-                </div>
+                    <div className={style.hardSkillsWrapper}>
+                        {it.hardSkills.map((hs, index) => 
+                            <Toggle key={index} name={hs.name} description={hs.description} changeDescription={changeHardSkill}/>)
+                        }
+                    </div>
+                    
+                    <div className={hardSkill !== hardSkillHolder ? style.hardSkillDescription : style.hardSkillDescriptionEmpty}>
+                        {hardSkill} 
+                    </div>
                 </div>
             </div>        
 
