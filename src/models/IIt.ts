@@ -1,4 +1,4 @@
-import ITechnology from "./IHardSkill";
+import ITechnology from "./ITechnology";
 import IProject from "./IProject";
 
 export default interface IIt {

@@ -1,4 +1,4 @@
-import ITechnology from "./IHardSkill";
+import ITechnology from "./ITechnology";
 
 export default interface IProject {
     name : string,
