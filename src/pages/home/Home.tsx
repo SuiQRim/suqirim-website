@@ -1,12 +1,30 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import style from './Home.module.css'
+import ApiRequests from '../../api/ApiRequests'
 
 type Props = {}
 
 const Home = (props: Props) => {
-  return (
-    <div>
-        Эта страница в разработке. Она будет про меня и будет интересно...
-    </div>
+
+    const [aboutMe, setAboutMe] = useState<string>()
+
+    useEffect(() =>{
+        const fetchAboutMe = async () => {
+            const data = await ApiRequests.getAbout('Home')
+            setAboutMe(data);
+        }
+        fetchAboutMe()
+    })
+
+    return (
+        <div className={style.home}>
+            <div>
+                <h2 style={{fontSize :'30px'}}>Обо мне</h2>
+                <div className='text' style={{fontSize :'24px'}}>
+                    {aboutMe}
+                </div>
+            </div>
+        </div>
   )
 }
 
