@@ -6,7 +6,7 @@
     width: 100%;
     display: grid; 
     height: fit-content;
-    align-items: start;
+    align-items: flex-start;
     gap: 40px;
     grid-template-columns: 2fr 1fr;
 }
@@ -20,7 +20,7 @@
     margin-top: 20px;
     display: flex;
     justify-content: flex-start;
-    align-items: end;
+    align-items: flex-end;
 }
 
 .profilePanel {
@@ -34,7 +34,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
     height: 72px;
     width: 72px;
 }
@@ -48,14 +47,8 @@
 }
 
 .headerMini .icon {
-    cursor: pointer;
     height: 86%;
     width: 86%;
-}
-
-.headerMini .icon:hover {
-    height: 100%;
-    width:  100%;
 }
 
 .headerMini .icon img {
