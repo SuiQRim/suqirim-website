@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { GameStatistic } from '../../storage/game/games';
+import GameStatistic from '../../storage/game/games.json';
 import Game from '../../components/game/Game';
 import style from './GamePage.module.css'
 import Input from '../../ui/input/Input';
@@ -11,7 +11,6 @@ const GamePage = (props: Props) => {
 
     const passedGames = GameStatistic.passed;
     const activeGames = GameStatistic.active;
-    const playWithFriendGames = GameStatistic.playWithFriends;
 
     const [gameFilter, setGameFilter] = useState('');
     
@@ -47,16 +46,6 @@ const GamePage = (props: Props) => {
                     <div className={style.gamesWrap}>
                         {
                             activeGames.map((g, index) => 
-                                <Game className={style.soloGame} key={index} game={g}  solo hideLikes></Game>)
-                        }
-                    </div>
-                </div>
-
-                <div>
-                    <h2>Катаю с друзьями</h2>
-                    <div className={style.gamesWrap}>
-                    {
-                            playWithFriendGames.map((g, index) => 
                                 <Game className={style.soloGame} key={index} game={g}  solo hideLikes></Game>)
                         }
                     </div>

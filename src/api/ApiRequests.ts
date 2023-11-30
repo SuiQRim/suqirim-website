@@ -1,13 +1,8 @@
-import axios from "axios";
-
+import aboutMes from '../storage/aboutMe/aboutMe.json'
 export default abstract class ApiRequests {
 
-    static server = axios.create({baseURL : 'https://localhost:7234/api/'});
     
     static async getAbout (theme :string) {;
-        return this.server.get<string>(`AboutMes/${theme}`).then(
-            (responce) => {
-                return responce.data;
-            })
+        return aboutMes.find(a => a.Theme === theme)?.Content;
     }
 }

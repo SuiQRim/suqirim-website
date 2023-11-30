@@ -1,27 +1,18 @@
-import axios from "axios";
-import IProject from './../models/IProject';
-import ITechnology from "../models/ITechnology";
 import ApiRequests from "./ApiRequests";
-
-const server = axios.create({baseURL : 'https://localhost:7234/api/'});
+import itJson from '../storage/it/it.json'
 
 export default class ITRequests extends ApiRequests {
 
     static async getProjects () {;
-        return server.get<IProject[]>('Projects').then(
-            (responce) => {
-                return responce.data;
-            })
+        return itJson.projects;
     }
 
     static async getAboutMe () {;
-        return await ApiRequests.getAbout('IT')
+        return ApiRequests.getAbout('IT');
     }
 
     static async getHardSkills () {;
-        return server.get<ITechnology[]>('HardSkills').then(
-            (responce) => {
-                return responce.data;
-            })
+
+        return itJson.hardSkills;
     }
 }
