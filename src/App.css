@@ -9,6 +9,13 @@ body, p {
     margin: auto;
 }
 
+:root {
+    --main-color: #724939;
+    --optional-color: #FF9B50;
+    --optional-hover-color: #FFBB5C;
+    --optional-active-color: #C63D2F;
+}
+
 .App {
     background: #fdfaf6;
     overflow: hidden;
@@ -88,7 +95,7 @@ h2 {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background-color: #724939;
+    background-color: var(--main-color);
 }
 
 /* Handle on hover */

@@ -6,7 +6,7 @@
     padding: 10px 20px;
     border-radius: 12px;
     font-weight: bolder;
-    background-color: #FF9B50;
+    background-color: var(--optional-color);
 }
 
 .simpleToggle {
@@ -15,10 +15,10 @@
 }
 
 .toggle:hover {
-    background-color: #FFBB5C;
+    background-color: var(--optional-hover-color);
 }
 .toggle:active {
-    background-color: #E25E3E;
+    background-color: var(--optional-active-color);
 }
 
 @media (max-width: 980px) {

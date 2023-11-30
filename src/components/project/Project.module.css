@@ -4,7 +4,7 @@
     grid-template-rows: auto 1fr auto auto;
     width: 340px;
     background: #fdfaf6;
-    border: #FF9B50 6px solid;
+    border: var(--optional-color) 6px solid;
     padding: 30px 40px 20px 40px;
     border-radius: 12px;
 }
@@ -32,14 +32,14 @@ a, u {
     transition: 0.25s;
     color: black;
     font-weight: bolder;
-    background: #FF9B50;
+    background: var(--optional-color);
     padding: 4px 16px;
-    border: solid 2px #524333;
+    border: solid 2px var(--main-color);
     border-radius: 6px;
 }
 
 .link:hover {
-    background-color: #FFBB5C;
+    background-color: var(--optional-color);
 }
 .link:active {
     background-color: #C63D2F;

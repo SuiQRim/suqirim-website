@@ -1,6 +1,6 @@
 .gameInList {
     display: flex;
-    border: #FF9B50 solid;
+    border: var(--optional-color) solid;
     border-width: 8px 8px 8px 8px;
     border-radius: 16px 16px 16px 16px;
     background: #fdfaf6;
@@ -13,7 +13,7 @@
 
 .gameSolo {
     display: flex;
-    background-color: #FF9B50;
+    background-color: var(--optional-color);
     border-radius: 12px;
     box-shadow: 4px 4px gray;
 }
@@ -60,7 +60,7 @@
     padding: 4px 16px 0px 16px;
     gap: 8px;
     border-radius: 16px 0px 0px 0px;
-    background-color: #FF9B50;
+    background-color: var(--optional-color);
 }
 
 .like {

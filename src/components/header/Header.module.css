@@ -1,7 +1,7 @@
 .header,
 .headerMini {
     transition: 0.25s;
-    background-color: #724939;
+    background-color: var(--main-color); 
     padding: 0px 18%;
     width: 100%;
     display: grid; 
