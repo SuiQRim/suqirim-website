@@ -37,7 +37,7 @@ const Game:FC<Props> = ({game, hideLikes, solo : isSolo, className}) => {
                         <span>{game.name}</span>
                     </div>
                     {
-                        (hideLikes && likes.length !== 0) ||
+                        (!hideLikes && likes.length !== 0) &&
                         <div className={style.tier}>
                             <div className={style.likes}>
                                 {likes} 

@@ -55,22 +55,26 @@
 
 @media (max-width: 980px) {
 
+    .game {
+        gap: 20px;
+    }
     .gamesWrap {
         margin: 0px 40px;
         display: flex;
+        justify-content: center;
         gap: 20px;
         flex-flow: wrap;
     }
     .soloGame {
-        width: 100%;
+        width: 80%;
     }
 
     .bounty{
         padding: 40px;
-        min-height: 1000px;
+        height: 880px;
     }
 
     .games{
-        padding: 40px;
+        padding: 20px;
     }
 }

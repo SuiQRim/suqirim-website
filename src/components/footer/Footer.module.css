@@ -9,16 +9,15 @@
 }
 
 .socialNetworks {
-    padding: 4px 0px;
+    padding: 4px 0px 3px 0px;
     display: flex;
     align-items: center;
-    height: 48px;
     gap: 10px;
 }
 
 .socNet {
     border-radius: 12px;
-    height: 86%;
+    height: 38px;
     transition: 0.25s;
     cursor: pointer;
 }
@@ -42,18 +41,15 @@
 }
 
 @media (max-width: 980px) {
-    .socNet {
-        height: 96px;
-        width: 96px;
-        border-radius: 16px;
-        border-width: 8px;
+    .footer {
+        gap: 0px;
+        padding: 2px 20px;
     }
-    .socNet img {
-        border-radius: 8px;
+    .socNet {
+        height: 64px;
     }
     .contacts {
+        height: 100%;
         font-size: 22px;
-        flex-direction: column;
-        gap: 10px;
     }
 }

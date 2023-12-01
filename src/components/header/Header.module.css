@@ -69,32 +69,30 @@
     .header,
     .headerMini {
         display: grid;
-        justify-content: center;
-        padding: 20px;
+        grid-column: 1fr 1fr;
+        width: 100%;
+        padding: 0px;
         gap: 10px;
     }
 
     .header {
-        display: flex;
-        flex-direction: column;
-        gap: 40px;
-        padding-bottom: 40px;
+        gap: 10px;
     }
 
-    .icon {
-        height: 420px;
-        width: 420px;
+    .headerMini .iconWrapper {
+        margin: 0px 10px;
+        height: 144px;
+        width: 144px;
     }
-    .iconMini {
-        height: 107px;
-        width: 107px;
-        border-width: 12px;
-        border-radius: 24px;
+    .header .iconWrapper {
+        margin: 20px;
+        width: 100%;
     }
 
     .navPanel {
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
+        margin: 46px 20px;
     }
 
     .profilePanelMini{
@@ -102,6 +100,6 @@
     }
     
     .profilePanel {
-        justify-content: center;
+        justify-content: end;
     }
 }
