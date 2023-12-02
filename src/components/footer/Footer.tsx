@@ -1,36 +1,31 @@
-import React from 'react'
+import React, { FC } from 'react'
 import style from './Footer.module.css'
-import someIcon from '../../Assets/Profile/Q34F.png'
+import IContacts from './../../models/IContacts';
 
-const socNets = [
-    someIcon,
-    someIcon,
-    someIcon,
-    someIcon
-]
+type Props = {
+    contacts: IContacts
+}
 
-
-export default function Footer() {
+const Footer:FC<Props> = ({contacts}) => {
   return (
     <div className={style.footer}>
-        <div className={style.contacts}>
-            <div>
-                +7-931-967-57-06 
-            </div>
-            <div>
-                samadioroman@gmail.com
-            </div>
+    <div className={style.contacts}>
+        <div>
+            {contacts.phone}
         </div>
-
-
-
-        <div className={style.socialNetworks}>
-            {socNets.map((sc, index) => 
-                <div key={index} className={style.socNet}>
-                    <img alt='social network' src={sc}/>
-                </div>
-            )}
+        <div>
+            {contacts.email}
         </div>
     </div>
+    <div className={style.socialNetworks}>
+        {contacts.socialNetworks.map((sc, index) => 
+            <a key={index} className={style.socNet} href={sc.link} target='_blank' rel="noreferrer">
+                <img alt='social network' src={sc.image}/>
+            </a>
+        )}
+    </div>
+</div>
   )
 }
+
+export default Footer;

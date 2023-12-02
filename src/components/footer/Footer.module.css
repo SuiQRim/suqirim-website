@@ -17,16 +17,18 @@
 
 .socNet {
     border-radius: 12px;
+    padding: 4px;
     height: 38px;
     transition: 0.25s;
     cursor: pointer;
 }
 
-.socNet:hover {
+.socNet:hover {padding: 0px;
     border-width: 0px;
 }
 
 .socNet img {
+    filter:invert(94%);
     border-radius: 6px;
     transition: 0.25s;
     height: 100%;
