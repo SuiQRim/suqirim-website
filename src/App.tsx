@@ -42,10 +42,11 @@ function App() {
                         <Route path='/music' element={<MusicPage/>}/>
                         <Route path='/home' element={<Home/>}/>
                         <Route path="*" element={<Navigate to='/home' replace />} />
-                    </Routes>
+                    </Routes> 
+                    <Footer contacts={{email: contacts.email, phone : contacts.phone, socialNetworks : socialNetworks}}/>
                 </div>   
             </div>
-            <Footer contacts={{email: contacts.email, phone : contacts.phone, socialNetworks : socialNetworks}}/>
+           
         </div>
   );
 }
